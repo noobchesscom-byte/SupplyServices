@@ -7,8 +7,8 @@ Environment: Windows 11 / PowerShell
 
 ## Progress log
 
-- [ ] Step 0 LLM module   <-- CURRENT
-- [ ] Step 1 EDGAR fetcher
+- [x] Step 0 LLM module
+- [ ] Step 1 EDGAR fetcher   <-- CURRENT
 - [ ] Step 2 Splitter + extractor
 - [ ] Step 3 Verifier + resolution
 - [ ] Step 4 Geocoding + graph + universe
@@ -26,12 +26,10 @@ Environment: Windows 11 / PowerShell
 ## Problems / notes
 
 - Initial repository inspection completed.
-- Backend directories are empty.
+- Backend implementation now includes llm.py, tests/, and requirements.txt.
 - scripts/ and docs/ are empty.
 - Local .env.example is missing.
-- No backend implementation exists.
 - Git main is synchronized with origin/main.
-- Step 0 has not started.
 - Python 3.13.6 verified.
 - Node.js 26.4.0 and npm 11.17.0 verified.
 - Python virtual environment created at backend/.venv.
@@ -43,6 +41,9 @@ Environment: Windows 11 / PowerShell
 - .env.example remains missing locally and must be addressed within permitted file scope.
 - Step 0 dependencies installed in backend/.venv: groq, pydantic, python-dotenv, httpx, pytest.
 - All five Step 0 dependency imports verified successfully.
+- Step 0 completed: backend/llm.py is implemented.
+- All 16 tests passed locally, including the real Groq integration test.
+- backend/requirements.txt was created.
 
 ## Resume prompt
 
