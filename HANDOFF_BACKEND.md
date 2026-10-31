@@ -46,7 +46,16 @@ Environment: Windows 11 / PowerShell
 - backend/requirements.txt was created.
 - FastAPI 0.162.0, SQLModel 0.0.48, and Uvicorn 0.54.0 added to backend/requirements.txt.
 - All three dependencies installed successfully in backend/.venv.
-- FastAPI, SQLModel, and Uvicorn imports verified successfully.
+- FastAPI, SQLModel, and Uvicorn imports verified.
+- FastAPI scaffold implemented in `backend/api/main.py`.
+- Convenience application entry point added at `backend/main.py`.
+- SQLModel database engine and session provider implemented in `backend/db.py`.
+- Filing model created in `backend/models.py`.
+- Database initialization and health endpoint tests implemented.
+- Full backend test suite: 19 passed, 0 failed.
+- One Starlette deprecation warning concerning httpx TestClient; tests still pass.
+- `backend/supplygraph.db` added to `backend/.gitignore` and verified ignored by Git.
+- The EDGAR fetcher has not yet been implemented or tested against a real SEC filing.
 
 ## Resume prompt
 
