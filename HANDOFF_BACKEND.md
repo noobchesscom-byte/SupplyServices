@@ -8,8 +8,8 @@ Environment: Windows 11 / PowerShell
 ## Progress log
 
 - [x] Step 0 LLM module
-- [ ] Step 1 EDGAR fetcher   <-- CURRENT
-- [ ] Step 2 Splitter + extractor
+- [x] Step 1 EDGAR fetcher
+- [ ] Step 2 Splitter + extractor   <-- CURRENT
 - [ ] Step 3 Verifier + resolution
 - [ ] Step 4 Geocoding + graph + universe
 - [ ] Step 5 Live events
@@ -52,10 +52,18 @@ Environment: Windows 11 / PowerShell
 - SQLModel database engine and session provider implemented in `backend/db.py`.
 - Filing model created in `backend/models.py`.
 - Database initialization and health endpoint tests implemented.
-- Full backend test suite: 19 passed, 0 failed.
 - One Starlette deprecation warning concerning httpx TestClient; tests still pass.
 - `backend/supplygraph.db` added to `backend/.gitignore` and verified ignored by Git.
-- The EDGAR fetcher has not yet been implemented or tested against a real SEC filing.
+- Step 1 completed: EDGAR fetcher implementation is complete in `backend/ingest/edgar.py`.
+- SEC responses cached on disk under `backend/.cache/sec/`.
+- Rate limiter enforcing <= 8 req/s and exponential backoff on HTTP 429 implemented.
+- SEC `Retry-After` supports both numeric seconds and HTTP-date values.
+- Non-finite numeric values (`inf`, `-inf`, `nan`) are rejected and safely fall back to exponential backoff.
+- Malformed SEC JSON and incomplete filing data are validated and reported as `ValueError`.
+- Real SEC filing successfully fetched and stored for NVDA (CIK 0001045810, Form 10-K, 1.96 MB text) in local database.
+- EDGAR tests: 16 passed, including the live SEC integration test.
+- Full backend test suite: 35 passed, 1 warning.
+- Step 1 remains complete; Step 2 (Splitter + extractor) remains the current step.
 
 ## Resume prompt
 
