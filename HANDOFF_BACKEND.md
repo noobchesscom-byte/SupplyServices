@@ -41,6 +41,8 @@ Environment: Windows 11 / PowerShell
 - Groq and NASA credentials were rotated after accidental exposure; do not record their values.
 - .env is located in the repository root as specified by BACKEND_BRIEF.md.
 - .env.example remains missing locally and must be addressed within permitted file scope.
+- Step 0 dependencies installed in backend/.venv: groq, pydantic, python-dotenv, httpx, pytest.
+- All five Step 0 dependency imports verified successfully.
 
 ## Resume prompt
 
