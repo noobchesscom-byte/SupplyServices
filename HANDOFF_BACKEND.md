@@ -44,6 +44,9 @@ Environment: Windows 11 / PowerShell
 - Step 0 completed: backend/llm.py is implemented.
 - All 16 tests passed locally, including the real Groq integration test.
 - backend/requirements.txt was created.
+- FastAPI 0.162.0, SQLModel 0.0.48, and Uvicorn 0.54.0 added to backend/requirements.txt.
+- All three dependencies installed successfully in backend/.venv.
+- FastAPI, SQLModel, and Uvicorn imports verified successfully.
 
 ## Resume prompt
 
